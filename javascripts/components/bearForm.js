@@ -1,4 +1,5 @@
 import { getBears } from '../helpers/data/bearData.js';
+import { createBearCards } from '../components/river.js';
 
 const createNewBearForm = () => {
   $('#bearForm').html(`
@@ -42,6 +43,7 @@ const submitNewBear = () => {
     };
     getBears().push(bear);
     clearForm();
+    createBearCards(getBears());
   });
 };
 
